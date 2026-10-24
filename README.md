@@ -19,6 +19,35 @@ Each skill is self-contained in its own folder with a `SKILL.md` file containing
 
 Many skills in this repo are open source (Apache 2.0). We've also included the document creation & editing skills that power [Claude's document capabilities](https://www.anthropic.com/news/create-files) under the hood in the [`skills/docx`](./skills/docx), [`skills/pdf`](./skills/pdf), [`skills/pptx`](./skills/pptx), and [`skills/xlsx`](./skills/xlsx) subfolders. These are source-available, not open source, but we wanted to share these with developers as a reference for more complex skills that are actively used in a production AI application.
 
+## Prax Teach
+
+Invoke `$teach-pro-max` for visual explanations, focused lessons and consent-based
+courses. The default is a complete explanation with visuals that show the
+mechanism, followed by optional practice. Durable learner state requires consent;
+viewing a lesson does not establish learning.
+
+Install both skills for the current teacher engine:
+
+```sh
+npx skills add praxstack/skills --skill teacher --skill teach-pro-max
+```
+
+The `teach-pro-max` wrapper resolves the sibling `teacher` skill when present.
+A wrapper-only install uses its preserved embedded compatibility engine. Runtime
+dependencies depend on the chosen medium; installation alone does not certify
+browser playback, authored Manim rendering or container isolation.
+
+In Claude Code, the `teach-pro-max` plugin installs both folders:
+
+```text
+/plugin marketplace add praxstack/skills
+/plugin install teach-pro-max@anthropic-agent-skills
+```
+
+[Source provenance and verification](docs/teach-pro-max/EXPORT-REPORT.md) records
+this public export. Full sandbox regression CI belongs to the
+[primary repository](https://github.com/praxstack/skills-and-personas).
+
 ## Disclaimer
 
 **These skills are provided for demonstration and educational purposes only.** While some of these capabilities may be available in Claude, the implementations and behaviors you receive from Claude may differ from what is shown in these skills. These skills are meant to illustrate patterns and possibilities. Always test skills thoroughly in your own environment before relying on them for critical tasks.
