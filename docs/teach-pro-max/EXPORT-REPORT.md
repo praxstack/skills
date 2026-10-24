@@ -1,23 +1,23 @@
 # Public source export
 
 Source repository: `praxstack/skills-and-personas`.
-Source commit: `51e1031918a5d9d4441b9b5265a8a9ef1746500e`.
+Source commit: `0b47dfaa22c7df47657ca5e966955c0b527e025d`.
 Export branch: `publish/teach-pro-max-20261024` in `praxstack/skills`.
 
 The export reads only committed Git blobs under `skills/teacher` and
-`skills/teach-pro-max`. It copies 1,566 files totaling 16,747,355 bytes: 762 teacher
+`skills/teach-pro-max`. It copies 1,566 files totaling 16,752,125 bytes: 762 teacher
 files and 804 wrapper/compatibility files. No runtime or source edits were made
 inside either copied tree. The file set, each SHA256 and every executable/symlink
 Git mode were checked against the source export manifest after running tests.
 
 [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) lists the source commit, Git blobs,
 Git modes, byte counts and SHA256 for every member. Its SHA256 is
-`de73e8fc8d31a182447f9fd1479fddb3238ea6d4aeddcfa47645ae4fb2571bdd`.
+`e4baeaad7f13eb1bae3a7698624a2f9ff48338a8b7efd3b5862d4557a26833c5`.
 The manifest and this report are outside the copied skill trees.
 
 ## Portable checks
 
-All six commands exited 0. Local execution used Python 3.13.17 and Node v26.12.1,
+All seven current commands exited 0. Local execution used Python 3.13.17 and Node v26.12.1,
 with PyYAML 6.0.3 and `PYTHONDONTWRITEBYTECODE=1`.
 Full command arguments and output are in
 [PORTABLE-TEST-RESULTS.json](PORTABLE-TEST-RESULTS.json).
@@ -28,12 +28,12 @@ Full command arguments and output are in
 - Wrapper distribution verification: 759 embedded engine files match the
   embedded source manifest. The verifier checks the wrapper name, not its full
   content; the external export manifest hashes the whole wrapper tree.
-- Teacher core: 71 tests, 3 expected standalone-copy skips. The skips are repo
+- Teacher core: 72 tests, 3 expected standalone-copy skips. The skips are repo
   lint and 2 site-course fixtures absent from this repository.
 - Discovery: 8 tests passed.
 - Manim resolution: 9 tests passed using trusted import-only controls; no authored
   scene was rendered.
-- Node publish/template/report regressions: 20 tests passed, 0 skips.
+- Node publish/template/report regressions: 21 tests passed, 0 skips.
 
 The CI workflow pins the same checkout action as the primary repository and
 installs PyYAML 6.0.3 in an isolated environment before these portable checks.
@@ -70,3 +70,13 @@ The initial round-1 portable rerun exposed a Node-only formula-control regressio
 [The failing command output](PORTABLE-ROUND-1-INITIAL-FAILURE.json) is preserved.
 The corrected source skips entity decoding for entity-free text; the same formula
 assertion and all six portable commands pass after correction.
+
+## Review round 2
+
+All three new findings are addressed in the exact primary source export.
+[REVIEW-ROUND-2.md](REVIEW-ROUND-2.md) records reproduced recall rescheduling,
+reserved lesson landing-name collision and standalone SVG source-script execution.
+The core, discovery, Manim, Node and affected safe-course suites pass. Secondary
+CI includes the safe-course suite. Course-level id index remains valid; only lesson
+id index and its case variants are reserved. Trusted local poster summary anchors
+remain unchanged.

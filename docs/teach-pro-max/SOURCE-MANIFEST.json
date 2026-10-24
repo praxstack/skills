@@ -1,7 +1,7 @@
 {
   "schema": "teach-public-source-export/v1",
   "source_repository": "https://github.com/praxstack/skills-and-personas",
-  "source_commit": "51e1031918a5d9d4441b9b5265a8a9ef1746500e",
+  "source_commit": "0b47dfaa22c7df47657ca5e966955c0b527e025d",
   "file_count": 1566,
   "files": [
     {
@@ -5775,9 +5775,9 @@
     {
       "path": "skills/teacher/scripts/series.py",
       "git_mode": "100755",
-      "git_blob": "bf34e218883aea56c3f810d01999dd1a9a5b03cc",
-      "sha256": "081dcf5ecb58879535af2e3f3805c27864a2ce6f98c1689e49b38918785b1c4f",
-      "bytes": 17025
+      "git_blob": "f5d24f1fa3660bf358390eb1364e973ff61e9e69",
+      "sha256": "bf186aa5842438f5611c6347f2c908e1e529c457c685c2dc61d5ebd29d8a743a",
+      "bytes": 17067
     },
     {
       "path": "skills/teacher/scripts/tests/run_all.sh",
@@ -5810,9 +5810,9 @@
     {
       "path": "skills/teacher/scripts/tests/test_teacher.py",
       "git_mode": "100755",
-      "git_blob": "8cd3f1053f55d049531c9d4d6d61a7c25026416b",
-      "sha256": "6324306d4c041b3bf0652835a3670375c3d0f2988ff06f958dd5ae51e70e3654",
-      "bytes": 82455
+      "git_blob": "4d94ad6d176fcfe04575a0cffccade003288f30b",
+      "sha256": "a076b9dd39863a39cb2d41abb1ff1994ba9e3a2f7a609112f2a08078d53086d2",
+      "bytes": 84124
     },
     {
       "path": "skills/teacher/scripts/vendor.py",
@@ -6013,9 +6013,9 @@
     {
       "path": "skills/teacher/skills/course/scripts/build_course.py",
       "git_mode": "100644",
-      "git_blob": "808faec3ea1a2bd190f7141d40586e2238f21495",
-      "sha256": "3d543d65ba0b4822460a3acc03d89ce72ab2a72d58dfcbadb44843075a97d009",
-      "bytes": 16900
+      "git_blob": "78b119462281948d0ad6c21f9d5757390367a628",
+      "sha256": "4134b7a41a101327d37bb76c8a67c354f2492dec311e08f057042129dda61eea",
+      "bytes": 17032
     },
     {
       "path": "skills/teacher/skills/course/scripts/check_course_page.mjs",
@@ -6083,9 +6083,9 @@
     {
       "path": "skills/teacher/skills/course/scripts/safe_course.py",
       "git_mode": "100644",
-      "git_blob": "63ef44858e1b1a951aae8840a50e7779a3808cc0",
-      "sha256": "cb7a9e367e679b415a7414d8319fcae9fba9efe1be29be2638d5b371af8f851c",
-      "bytes": 10460
+      "git_blob": "55e4798b14234414c949ca5fb2f57c63b03efd3c",
+      "sha256": "fc4e1908d0744c96d1d006a7b4a84662cf95b1dc5a4d954c6c681ce405ae1325",
+      "bytes": 10714
     },
     {
       "path": "skills/teacher/skills/course/scripts/sandbox_course.py",
@@ -6125,9 +6125,9 @@
     {
       "path": "skills/teacher/skills/course/scripts/test_safe_course.py",
       "git_mode": "100644",
-      "git_blob": "2a6d32ac6474f8058b28012a6c81658e3498f431",
-      "sha256": "f9f3d24d627524ebfd6f2b8ea19f9fc79cab372327218f6ece2d15aa0e7976f5",
-      "bytes": 5198
+      "git_blob": "f8b2c66b085cb906016668022df2066e4a87ec8f",
+      "sha256": "ae39c1a671d2a215867b12b42b6359fd7caf60c21f471e38dc80f53890d45283",
+      "bytes": 7122
     },
     {
       "path": "skills/teacher/skills/course/scripts/test_sandbox_course.py",
@@ -6447,9 +6447,9 @@
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_poster.mjs",
       "git_mode": "100644",
-      "git_blob": "0a47ec1c423338451c4738c54dcbb7834a9eb966",
-      "sha256": "874330c5622b2fd5264fbd845a80974a03844faa40e20a0806c1113615018bad",
-      "bytes": 6682
+      "git_blob": "3a3f52a453fdef44d9021978973f290cf34c9d5a",
+      "sha256": "49296fda913fa6a9e04bfb35aab0a4a910b47da164e7e050232306e07e2b581c",
+      "bytes": 6845
     },
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_templates.mjs",
@@ -6461,9 +6461,9 @@
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_templates.test.mjs",
       "git_mode": "100644",
-      "git_blob": "7ff2350497f3d20121fef15a57035fcc5cc536e8",
-      "sha256": "9480ca7fc15537b20c005e8e90a5189d1766510478c4b98d213f0b06803c6a92",
-      "bytes": 4444
+      "git_blob": "d6e52defe9f009119fb1532d93a0017212ddf0b8",
+      "sha256": "139a67e3b561d22d94cc4b41529da468532ba1d129588eb5df217a3e4e98d3d0",
+      "bytes": 5030
     },
     {
       "path": "skills/teacher/skills/explorable/scripts/check_code.mjs",
