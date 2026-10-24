@@ -1,18 +1,18 @@
 # Public source export
 
 Source repository: `praxstack/skills-and-personas`.
-Source commit: `0b47dfaa22c7df47657ca5e966955c0b527e025d`.
+Source commit: `ea37c73841bbf1fb8a80ed666a1d79e213f9d166`.
 Export branch: `publish/teach-pro-max-20261024` in `praxstack/skills`.
 
 The export reads only committed Git blobs under `skills/teacher` and
-`skills/teach-pro-max`. It copies 1,566 files totaling 16,752,125 bytes: 762 teacher
+`skills/teach-pro-max`. It copies 1,566 files totaling 16,756,561 bytes: 762 teacher
 files and 804 wrapper/compatibility files. No runtime or source edits were made
 inside either copied tree. The file set, each SHA256 and every executable/symlink
 Git mode were checked against the source export manifest after running tests.
 
 [SOURCE-MANIFEST.json](SOURCE-MANIFEST.json) lists the source commit, Git blobs,
 Git modes, byte counts and SHA256 for every member. Its SHA256 is
-`e4baeaad7f13eb1bae3a7698624a2f9ff48338a8b7efd3b5862d4557a26833c5`.
+`63221d7da0e1156d3df3cb2d98c488fa061c066c760c0819032725f4194f5fd5`.
 The manifest and this report are outside the copied skill trees.
 
 ## Portable checks
@@ -28,12 +28,12 @@ Full command arguments and output are in
 - Wrapper distribution verification: 759 embedded engine files match the
   embedded source manifest. The verifier checks the wrapper name, not its full
   content; the external export manifest hashes the whole wrapper tree.
-- Teacher core: 72 tests, 3 expected standalone-copy skips. The skips are repo
+- Teacher core: 74 tests, 3 expected standalone-copy skips. The skips are repo
   lint and 2 site-course fixtures absent from this repository.
 - Discovery: 8 tests passed.
 - Manim resolution: 9 tests passed using trusted import-only controls; no authored
   scene was rendered.
-- Node publish/template/report regressions: 21 tests passed, 0 skips.
+- Node publish/template/report regressions: 22 tests passed, 0 skips.
 
 The CI workflow pins the same checkout action as the primary repository and
 installs PyYAML 6.0.3 in an isolated environment before these portable checks.
@@ -80,3 +80,11 @@ The core, discovery, Manim, Node and affected safe-course suites pass. Secondary
 CI includes the safe-course suite. Course-level id index remains valid; only lesson
 id index and its case variants are reserved. Trusted local poster summary anchors
 remain unchanged.
+
+## Review round 3
+
+The exact export includes all three round-3 fixes: explicit explanation reveal
+without fabricated unaided evidence, prototype-safe lesson layout dictionaries,
+and literal fallback insertion preserving authored replacement tokens.
+[REVIEW-ROUND-3.md](REVIEW-ROUND-3.md) links focused browser and portable RED/GREEN
+receipts. The seven portable commands pass again in this secondary checkout.
