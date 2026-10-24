@@ -17,8 +17,8 @@ The manifest and this report are outside the copied skill trees.
 
 ## Portable checks
 
-All six commands exited 0. Local execution used Python 3.13.17 and v26.12.1,
-with PyYAML 6.0.3 and `Python 3.13.17DONTWRITEBYTECODE=1`.
+All six commands exited 0. Local execution used Python 3.13.17 and Node v26.12.1,
+with PyYAML 6.0.3 and `PYTHONDONTWRITEBYTECODE=1`.
 Full command arguments and output are in
 [PORTABLE-TEST-RESULTS.json](PORTABLE-TEST-RESULTS.json).
 
@@ -51,3 +51,8 @@ plugin entries, marketplace ownership and licenses remain in place.
 
 This preparation report records local verification. Remote CI, PR review,
 merge, skills.sh discovery and post-merge installation are separate release steps.
+
+The broad `git diff --check` reports pre-existing whitespace in the exact exported
+source and vendored licenses. Those bytes remain unchanged. Publication glue passes
+a scoped whitespace check; workflow YAML parses with PyYAML 6.0.3. Committed Git
+blob IDs, modes and membership also match all 1,566 source manifest entries.
