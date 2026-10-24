@@ -1,7 +1,7 @@
 {
   "schema": "teach-public-source-export/v1",
   "source_repository": "https://github.com/praxstack/skills-and-personas",
-  "source_commit": "4753585b0eb9a2da915f9f450c54f8b02724ae5e",
+  "source_commit": "51e1031918a5d9d4441b9b5265a8a9ef1746500e",
   "file_count": 1566,
   "files": [
     {
@@ -6384,23 +6384,23 @@
     {
       "path": "skills/teacher/skills/explorable/assets/engine/code.js",
       "git_mode": "100644",
-      "git_blob": "cad52abe5044f1a6df6660a553dc9f3c3350d70b",
-      "sha256": "fc308f12d365b785239aed0f3248ab4278a171ae698dd4cace212487524523eb",
-      "bytes": 17191
+      "git_blob": "83615fa7687a9b60149d5dfaa8014b95c384f566",
+      "sha256": "3bdc430d4e24ee0681565170da9bcd83d991459ccad5643e72b0bc0d8e7296b1",
+      "bytes": 17217
     },
     {
       "path": "skills/teacher/skills/explorable/assets/engine/explorable.css",
       "git_mode": "100644",
-      "git_blob": "7759560b5d5930fd40264dd85befd2e6c04944a0",
-      "sha256": "cc5d91f8e41322fcfb96bbb61e1a734959fa6dbd6e9ddb7ddc6ef7b4fac6eff6",
-      "bytes": 11269
+      "git_blob": "127109daa3bb76165076d83caa2cc6ee234b2ebf",
+      "sha256": "2c517319594699b9322794986ea15fd4cccbd2e346c5e380c7cc0b685984d7fc",
+      "bytes": 11304
     },
     {
       "path": "skills/teacher/skills/explorable/assets/engine/explorable.js",
       "git_mode": "100644",
-      "git_blob": "ded98023e296b126057d0e7a68d5b1157b91bb1d",
-      "sha256": "914a40a13fcfc862b5473fd58fc6b14d5116ceed34165bcb9cc6e28416f18309",
-      "bytes": 44897
+      "git_blob": "b7c085142e4acca891760183b2cccbaa08b2f306",
+      "sha256": "c6949921f14407e53228b789b2de0796158aff6743e7c625e871f9c220fb24ec",
+      "bytes": 45424
     },
     {
       "path": "skills/teacher/skills/explorable/assets/engine/progress.js",
@@ -6440,9 +6440,9 @@
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_lesson.mjs",
       "git_mode": "100644",
-      "git_blob": "21085f08a0ea6f3edca22db03aa29a0c7fb0d429",
-      "sha256": "9c5cc13e3407a21fabc1f74aff839a18c4838182a27adfb67049dfcf5d82beeb",
-      "bytes": 16853
+      "git_blob": "f63ecbbd1138afa37e32f56b982df70b20b5b703",
+      "sha256": "ecd3b18596d2654386cc51e1fd9134fe8048f188d4013b1067cd8e9e3eb5a080",
+      "bytes": 16926
     },
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_poster.mjs",
@@ -6454,16 +6454,16 @@
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_templates.mjs",
       "git_mode": "100644",
-      "git_blob": "2c70909e93a0b51d9b868da271f886605bf29c34",
-      "sha256": "6a97834085b010b28f6dc733275c5cabf3e617d43f8902ea26f6181c1960d742",
-      "bytes": 19461
+      "git_blob": "091eaaea34e0906c8c85b0c2729d15911aacc849",
+      "sha256": "0f583fd4ddffe2945a28280be18fc6324a6825418b13ea8618ddb7413836d242",
+      "bytes": 19584
     },
     {
       "path": "skills/teacher/skills/explorable/scripts/bundle_templates.test.mjs",
       "git_mode": "100644",
-      "git_blob": "d2281ded91ee2b39855c6c2d19695702378c385c",
-      "sha256": "5598f3ca0d2c5d8bbaa3ffb42fea4a5c783dda23b2b4f33b24308c60d22d0543",
-      "bytes": 3191
+      "git_blob": "7ff2350497f3d20121fef15a57035fcc5cc536e8",
+      "sha256": "9480ca7fc15537b20c005e8e90a5189d1766510478c4b98d213f0b06803c6a92",
+      "bytes": 4444
     },
     {
       "path": "skills/teacher/skills/explorable/scripts/check_code.mjs",
