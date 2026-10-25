@@ -96,6 +96,29 @@ class ReadingThemes(unittest.TestCase):
             subprocess.run([sys.executable, str(SCRIPT), str(page), '-o', str(page)], check=True)
             self.assertEqual(page.read_bytes(), first)
 
+    def test_cli_preserves_authored_newline_bytes(self):
+        documents = (
+            '<!doctype html>\r\n<html><head><title>π</title></head>\r\n<body>café</body></html>\r\n'.encode('utf-8'),
+            '<!doctype html>\r<html><head><title>π</title></head>\r<body>café</body></html>\r'.encode('utf-8'),
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for index, original in enumerate(documents):
+                for in_place in (False, True):
+                    with self.subTest(index=index, in_place=in_place):
+                        source = root / f'lesson-{index}-{in_place}.html'
+                        output = source if in_place else root / f'output-{index}.html'
+                        source.write_bytes(original)
+                        command = [sys.executable, str(SCRIPT), str(source), '-o', str(output)]
+                        subprocess.run(command, check=True, capture_output=True, text=True)
+                        injected = output.read_bytes()
+                        stripped = re.sub(rb'<!-- reading-themes:start -->.*?<!-- reading-themes:end -->',
+                                           b'', injected, flags=re.S)
+                        self.assertEqual(stripped, original)
+                        subprocess.run([sys.executable, str(SCRIPT), str(output), '-o', str(output)],
+                                       check=True, capture_output=True, text=True)
+                        self.assertEqual(output.read_bytes(), injected)
+
     def test_palette_shape_and_names(self):
         expected = ['graphite', 'slate', 'forest', 'mocha', 'indigo', 'midnight', 'amber', 'ember', 'moss', 'plum']
         self.assertEqual([p['id'] for p in DATA['palettes']], expected)
@@ -132,7 +155,7 @@ const {css,videoLesson}=await import(process.argv[1]);
 const data={title:'Export contrast',subtitle:'Reading surfaces',sources:[],video:{captions:'WEBVTT\n\n',scenes:[{start:0,dur:1,chapter:'Boundary',say:'A caption',step:0,params:{}}]}};
 console.log(JSON.stringify({html:videoLesson(data),tokens:[...new Set([...css.matchAll(/--([a-z0-9-]+):/g)].map(m=>m[1]))]}));
 """
-        run = subprocess.run(['node', '--input-type=module', '-e', js, template.as_uri()], capture_output=True, text=True)
+        run = subprocess.run(['node', '--input-type=module', '-e', js, template.as_uri()], capture_output=True, text=True, encoding='utf-8')
         self.assertEqual(run.returncode, 0, run.stderr)
         exported = json.loads(run.stdout)
         output = module.embed_reading_themes(exported['html'])
