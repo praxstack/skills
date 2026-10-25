@@ -1,6 +1,6 @@
 {
   "source_repository": "praxstack/skills-and-personas",
-  "source_commit": "02943a2f6bc33528ebb2811feefba7475f4db070",
+  "source_commit": "e6c7726cc8f1dcb7687da03d8a60cd4314b83948",
   "scope": "Exact Teacher1.3.0 and TeachProMax3.1.0 tracked source trees; embedded compatibility implementation preserved. No local GATE lessons or runtime dependencies.",
   "files": [
     {
@@ -5662,16 +5662,16 @@
     {
       "path": "skills/teacher/assets/reading-themes/themes.css",
       "git_mode": "100644",
-      "git_blob": "f24fd0a8c5721c03184fbef179424d56e27047bd",
-      "bytes": 5101,
-      "sha256": "f0ae3f6ad6cbfe0ce91123c3ccefad674cb685f779f9ad846096c4e860b2c28b"
+      "git_blob": "05639fedd0029a19b22f28332dd3556ffe8cfe5c",
+      "bytes": 5122,
+      "sha256": "7f9a5ccd4e7129e12592f85ef3e7fe40a5b764c616810cfbee19d80d3fa2ff1a"
     },
     {
       "path": "skills/teacher/assets/reading-themes/themes.js",
       "git_mode": "100644",
-      "git_blob": "cb1cd113d9d2df989baabe9802853eb610cef5d1",
-      "bytes": 6633,
-      "sha256": "c15378684e5a51931cd8bf285776dfa468647ef27f22883b57b21611dc48ca19"
+      "git_blob": "4a40ddebf87488a63ee58aca44db5438a3440755",
+      "bytes": 6649,
+      "sha256": "6fe0bad5b6c60c74c013006639aa8afe42a57163922695a17c6b78d2dc4be605"
     },
     {
       "path": "skills/teacher/assets/reading-themes/themes.json",
@@ -5795,9 +5795,9 @@
     {
       "path": "skills/teacher/scripts/embed_reading_themes.py",
       "git_mode": "100644",
-      "git_blob": "17a4e40bafeb2da208b3111aa1a58ec3808d8a36",
-      "bytes": 4726,
-      "sha256": "0897006020ed13adcd20789f1160ade5053a2ea6daaa22e15a4a5b4c435bbc7b"
+      "git_blob": "28d4bdb5884d915d410e3246bb02a338746c3a60",
+      "bytes": 4808,
+      "sha256": "2108842185657a6c760b6d9d2b3230aaab8718ef201df6f17974f1f60c9bcb98"
     },
     {
       "path": "skills/teacher/scripts/find_tool.py",
@@ -5844,16 +5844,16 @@
     {
       "path": "skills/teacher/scripts/tests/test_reading_themes.py",
       "git_mode": "100644",
-      "git_blob": "4c165ff5e20ad14d5bb71ea455b84c0033c34fee",
-      "bytes": 8090,
-      "sha256": "14c5400bc4428b72a1e518101bcc9593e8faf94daf5b749cd930ae826d2bd5d4"
+      "git_blob": "62f2a839689ebe168acc4074cd117cfa6d32b63e",
+      "bytes": 9491,
+      "sha256": "f07d3a8af6a25d642f988a8798673c1876385daf16c2523fe4a25382369a0491"
     },
     {
       "path": "skills/teacher/scripts/tests/test_reading_themes_browser.mjs",
       "git_mode": "100644",
-      "git_blob": "3658430c1a472476a04f6094b9b42edef0abf670",
-      "bytes": 21618,
-      "sha256": "d5011ca0791e8440295e3939e18d65ea9b51f529772b53edcdc6bbf86a67cd3d"
+      "git_blob": "cce60756a12d1df6e01c9a6f2208afdd4aad5dd7",
+      "bytes": 29778,
+      "sha256": "30f4ad14b683f62cc86eaea87dd6c24c470e5af46ee4ff94941508913d6de0f9"
     },
     {
       "path": "skills/teacher/scripts/tests/test_teacher.py",
