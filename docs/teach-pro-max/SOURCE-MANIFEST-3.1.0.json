@@ -1,6 +1,6 @@
 {
   "source_repository": "praxstack/skills-and-personas",
-  "source_commit": "ec9532843bce7611302baec034c1c4fbd438f4ec",
+  "source_commit": "02943a2f6bc33528ebb2811feefba7475f4db070",
   "scope": "Exact Teacher1.3.0 and TeachProMax3.1.0 tracked source trees; embedded compatibility implementation preserved. No local GATE lessons or runtime dependencies.",
   "files": [
     {
@@ -5662,9 +5662,9 @@
     {
       "path": "skills/teacher/assets/reading-themes/themes.css",
       "git_mode": "100644",
-      "git_blob": "c0d03b1132723b48ac826047e9c40068877f0e7e",
-      "bytes": 5063,
-      "sha256": "ba0608217b008d1fc5e948b7524ed89ef8be591dc2da546213a94614f7b06c5a"
+      "git_blob": "f24fd0a8c5721c03184fbef179424d56e27047bd",
+      "bytes": 5101,
+      "sha256": "f0ae3f6ad6cbfe0ce91123c3ccefad674cb685f779f9ad846096c4e860b2c28b"
     },
     {
       "path": "skills/teacher/assets/reading-themes/themes.js",
@@ -5739,9 +5739,9 @@
     {
       "path": "skills/teacher/references/READING-THEMES.md",
       "git_mode": "100644",
-      "git_blob": "ac8a20ccca2cf0d585270f77cbc1b38bf9b1195d",
-      "bytes": 5215,
-      "sha256": "acce702335b280dcf0d6aea5213a57f68e33df11b207e3a1d9fe3942c23f07f7"
+      "git_blob": "eaff668a82691418cb19ec2ead2d255af501fb49",
+      "bytes": 5333,
+      "sha256": "1416f744e8015593536b90a38f554db7c5a0e5599baa2459c095544dfc1a6cc4"
     },
     {
       "path": "skills/teacher/references/SERIES.md",
@@ -5844,16 +5844,16 @@
     {
       "path": "skills/teacher/scripts/tests/test_reading_themes.py",
       "git_mode": "100644",
-      "git_blob": "04ef4950b3c5c88867145532cb5efe63dffe0eee",
-      "bytes": 6924,
-      "sha256": "9947d3c428411c05bcc4edac2a1a51b3ce1f93a4d2e4d4060543ac7e01f086f0"
+      "git_blob": "4c165ff5e20ad14d5bb71ea455b84c0033c34fee",
+      "bytes": 8090,
+      "sha256": "14c5400bc4428b72a1e518101bcc9593e8faf94daf5b749cd930ae826d2bd5d4"
     },
     {
       "path": "skills/teacher/scripts/tests/test_reading_themes_browser.mjs",
       "git_mode": "100644",
-      "git_blob": "15d5b3ab94e6fd66b56c9218f524a51cd6d5aa95",
-      "bytes": 18209,
-      "sha256": "c82115a3b7cba7bfa2c617fa7626462483f1e8d9b5fc582cf3e27c4a352b6655"
+      "git_blob": "3658430c1a472476a04f6094b9b42edef0abf670",
+      "bytes": 21618,
+      "sha256": "d5011ca0791e8440295e3939e18d65ea9b51f529772b53edcdc6bbf86a67cd3d"
     },
     {
       "path": "skills/teacher/scripts/tests/test_teacher.py",
