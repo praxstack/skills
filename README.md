@@ -21,6 +21,8 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 
 ## Prax Teach
 
+Current versions are Teacher 1.3.0 and Teach Pro Max 3.1.0. Substantive lessons use HTML by default, with five dark and five night reading themes. Palette selection follows course links without enabling learner-progress saving. [Reading themes](skills/teacher/references/READING-THEMES.md), [current source export](docs/teach-pro-max/EXPORT-3.1.0.md) and [versions](docs/teaching/versions-current.json).
+
 Invoke `$teach-pro-max` for visual explanations, focused lessons and consent-based
 courses. The default is a complete explanation with visuals that show the
 mechanism, followed by optional practice. Durable learner state requires consent;
