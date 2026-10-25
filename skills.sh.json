@@ -1,0 +1,14 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "groupings": [
+    {
+      "title": "Visual teaching",
+      "description": "Select teacher and teach-pro-max together for the full current engine: standalone Teacher with 22 bundled modules, plus the Teach Pro Max tutoring entry.",
+      "skills": [
+        "teacher",
+        "teach-pro-max"
+      ]
+    }
+  ],
+  "notGrouped": "bottom"
+}

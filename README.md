@@ -123,3 +123,13 @@ The markdown content below contains the instructions, examples, and guidelines t
 Skills are a great way to teach Claude how to get better at using specific pieces of software. As we see awesome example skills from partners, we may highlight some of them here:
 
 - **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
+
+### Teaching editions and installing the pair
+
+Teacher is the standalone engine; Teach Pro Max is the tutoring entry using it. Install both for the full current engine:
+
+```sh
+npx skills add praxstack/skills --skill teacher teach-pro-max
+```
+
+Teacher is now local edition 1.2.0; Teach Pro Max retains release 3.0.2 and its existing compatibility fallback. Teacher alone works; Teach Pro Max alone uses that fallback. [Installation and exact edition provenance](docs/teaching/INSTALL.md) explain the difference. The skills.sh grouping changes display only, not dependency installation.
