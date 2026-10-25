@@ -124,7 +124,7 @@ Skills are a great way to teach Claude how to get better at using specific piece
 
 - **Notion** - [Notion Skills for Claude](https://www.notion.so/notiondevs/Notion-Skills-for-Claude-28da4445d27180c7af1df7d8615723d0)
 
-### Teaching editions and installing the pair
+## Teaching editions and installing the pair
 
 Teacher is the standalone engine; Teach Pro Max is the tutoring entry using it. Install both for the full current engine:
 
