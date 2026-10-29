@@ -21,6 +21,8 @@ Many skills in this repo are open source (Apache 2.0). We've also included the d
 
 ## Prax Teach
 
+Current versions are Teacher 1.3.0 and Teach Pro Max 3.1.0. Substantive lessons use HTML by default, with five dark and five night reading themes. Palette selection follows course links without enabling learner-progress saving. [Reading themes](skills/teacher/references/READING-THEMES.md), [current source export](docs/teach-pro-max/EXPORT-3.1.0.md) and [versions](docs/teaching/versions-current.json).
+
 Invoke `$teach-pro-max` for visual explanations, focused lessons and consent-based
 courses. The default is a complete explanation with visuals that show the
 mechanism, followed by optional practice. Durable learner state requires consent;
@@ -44,7 +46,7 @@ In Claude Code, the `teach-pro-max` plugin installs both folders:
 /plugin install teach-pro-max@anthropic-agent-skills
 ```
 
-[Source provenance and verification](docs/teach-pro-max/EXPORT-REPORT.md) records
+[Source provenance and verification](docs/teach-pro-max/EXPORT-3.1.0.md) records
 this public export. Full sandbox regression CI belongs to the
 [primary repository](https://github.com/praxstack/skills-and-personas).
 
@@ -132,4 +134,4 @@ Teacher is the standalone engine; Teach Pro Max is the tutoring entry using it. 
 npx skills add praxstack/skills --skill teacher teach-pro-max
 ```
 
-Teacher is now local edition 1.2.0; Teach Pro Max retains release 3.0.2 and its existing compatibility fallback. Teacher alone works; Teach Pro Max alone uses that fallback. [Installation and exact edition provenance](docs/teaching/INSTALL.md) explain the difference. The skills.sh grouping changes display only, not dependency installation.
+Teacher works on its own. Teach Pro Max alone uses its preserved compatibility fallback; the current reading-theme helper requires the paired engine. [Installation and component versions](docs/teaching/INSTALL.md) explain the difference. The skills.sh grouping changes display only, not dependency installation.
