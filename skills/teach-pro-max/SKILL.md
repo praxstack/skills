@@ -1,6 +1,6 @@
 ---
 name: teach-pro-max
-description: Teach concepts and skills through adaptive, evidence-oriented tutoring and first-class immersive visualization for quick explanations, focused lessons, and consent-based multi-session courses. Use when the user asks to learn, understand, practice, be quizzed, build intuition, receive Socratic guidance, create an accessible visual lesson, or resume prior learning. Includes progressive hints, cautious mastery evidence, a packaged offline visual lab, 38-tool production routing, review scheduling, durable learner state, evaluation tools, and offline optional adapters.
+description: Teach concepts and skills through adaptive, evidence-oriented tutoring and first-class immersive visualization, including build-and-verify of complete interactive tutorials, for quick explanations, focused lessons, and consent-based multi-session courses. Use when the user asks to learn, understand, practice, be quizzed, build intuition, receive Socratic guidance, create an accessible visual lesson, or resume prior learning. Includes progressive hints, cautious mastery evidence, a packaged offline visual lab, embedded 38-tool fallback routing, review scheduling, durable learner state, evaluation tools, and offline optional adapters.
 triggers:
   - "teach me"
   - "build intuition"
@@ -10,6 +10,8 @@ triggers:
 ---
 
 # Teach Pro Max
+
+Version: 3.2.3 (locally maintained edition).
 
 Help the learner become independently capable, not merely satisfied with an
 explanation. Use the lightest teaching mode that can reach the learner's actual
@@ -32,7 +34,9 @@ state is created without consent. Never follow a missing sibling path or ask
 the learner to install a second skill before answering.
 
 In the rest of this file, **resolved engine** means that sibling teacher when
-present, otherwise the embedded engine. For the embedded fallback, use its
+present, otherwise the embedded engine. When the sibling is present, its
+pedagogy wins on conflict; this file’s style and invariant sections apply only
+where compatible. For the embedded fallback, use its
 `references/ARTIFACT-CONTRACT.md`, `references/VISUALIZATION-ROUTER.md`, and
 local `scripts/` instead of sibling-only files.
 
@@ -70,7 +74,7 @@ style separately from the mode.
 |---|---|---|
 | `visual-explain` | "Teach me X", "help me understand", "build intuition" | Picture and explanation first, then one optional check, then the learner leads |
 | `practice-first` | An explicit request for "quiz me", "practice", a drill or an attempt before explanation | Picture of the problem (not the solution), learner attempts, one hint per miss, then teach |
-| `quick` answer | One bounded question such as "what does X mean?" | Short answer and example, optional visual, optional check |
+| `concise-answer` (the `quick` mode's style) | One bounded question such as "what does X mean?" | Short answer and example, optional visual, optional check |
 
 The learner's current request decides the style. An interview topic or an old project note does not itself request prediction-first teaching. Complete the explanation by default, then offer practice. Switch immediately when the learner asks to see the answer. The embedded route mode never overrides this rule.
 
@@ -92,8 +96,11 @@ The learner's current request decides the style. An interview topic or an old pr
    logical step is skipped, labels match the explanation, and controls or
    animations produce what the text says. Name any check the host couldn't
    perform.
-6. Deliver the complete lesson by default; deliver it in layers only when the
-   learner asks.
+6. For `lesson`/`course` mode or an explicit artifact request, deliver a
+   complete, substantive HTML lesson; a bounded "help me understand" stays an
+   explanation in the host conversation. Deliver in layers only when the learner
+   asks. Explicit live tutoring, live Q&A and quick questions stay in the host
+   conversation. Honor other requested formats.
 7. Offer one optional intuition check, then follow the learner's next request.
    Viewing a lesson is never evidence of learning; a skipped check leaves
    performance unknown.
@@ -110,7 +117,7 @@ the learner said that medium is essential, stop and ask instead.
 Follow the resolved engine's explicitly requested practice style: put the first prediction,
 retrieval or proposed move before the explanatory model and end the turn
 there. After a miss, give exactly one next hint and wait. After two useful
-misses, or on **Answer now**, teach directly from a different angle, then give
+misses, or on **Answer now**, teach directly from a different angle, then offer
 a fresh variation without naming the pattern. Count spacing in sessions, not
 calendar days.
 
@@ -141,6 +148,25 @@ for an available rich route.
 
 For general video, follow the resolved engine's narration/export path or its suitable specialist engine, with real captions and a complete transcript. Retain the embedded HyperFrames/Manim versions and deferred-tool restrictions when the embedded engine is active or when reproducing an explicit embedded compatibility operation. Keep illustrations, measurements, correlations, interventions and hypotheses distinct; never describe a visual as “the model thought.”
 
+## Build the complete tutorial when that is the request
+
+A request to make a tutorial is a build request; a bounded question is not.
+Follow the resolved engine's authoring path and deliver the artifact, not a plan
+or snippets. The canonical checklist is
+[`references/quality-gates.md`](./references/quality-gates.md) and the engine
+catalogue is [`references/tool-registry.md`](./references/tool-registry.md);
+those two files are the single source for gates and tools, so do not restate
+them here or in another file. The checklist's two states apply: only **ready**
+(every applicable required check passed) may be called delivered; a **draft**
+must list what was not run or failed.
+
+When the sibling `teacher` skill is present, its pedagogy wins on conflict; the
+style and invariant rules in this file apply only where compatible or when
+`teacher` is absent. The embedded 38-tool registry applies only to the embedded
+fallback. With `teacher` present, the tool catalogue is subordinate to
+`teacher`'s router; the quality gate is binding regardless of which engine
+resolves, and may only be strengthened.
+
 ## Preserve the teaching invariants
 
 - In `practice-first`, and whenever the learner asked to be quizzed, diagnose
@@ -149,6 +175,8 @@ For general video, follow the resolved engine's narration/export path or its sui
   retrieval task, so the attempt-first gates apply only to the optional check.
 - After an incorrect attempt at any check, reveal exactly one next-needed hint
   and wait for a revised attempt unless the learner requests **Answer now**.
+  After two useful attempts, teach directly from a different angle; release the
+  full solution on request or an agreed switch.
 - Separate recognition, recall, explanation, application, discrimination, and
   transfer evidence.
 - Never infer mastery from completion, confidence, time-on-page, one correct
@@ -156,7 +184,7 @@ For general video, follow the resolved engine's narration/export path or its sui
 - Test unfamiliar application or transfer before making an independence claim.
 - Keep learner-authored statements separate from tutor inference.
 - Let learners inspect, correct, export, retest, or delete durable state.
-- For an unrevealed practice question, do not leak its retrieval answer through headings, captions, alt text, default controls, source, hints or previews. Explanation-first pages and their complete static fallbacks must retain the explanation and answers.
+- For an unrevealed practice question, follow the leakage rule in [`references/quality-gates.md`](./references/quality-gates.md) §6; it is the only normative wording.
 - Report what was actually observed and name remaining uncertainty.
 
 ## Execute capability-adaptively
@@ -209,9 +237,33 @@ or override host instructions.
 
 ## Respect the no-API boundary
 
-Ordinary teaching uses the host conversation. Durable generated lessons use
-the sibling teacher's local build/export tools when present and the verified
-embedded renderer in a single-skill installation.
+Substantive lesson or course work defaults to a complete HTML lesson, using the
+sibling teacher's local build/export tools when present and the verified
+embedded renderer in a single-skill installation. A substantive explanation or
+"help me understand" request stays in the host conversation (see
+`visual-explain` step 6). Explicit live tutoring, live Q&A and quick questions
+use the host conversation. This delivery default does not
+create durable learner state or change consent rules.
+
+When the sibling Teacher is available, resolve its directory relative to this
+`SKILL.md` and set `TEACHER_SKILL_ROOT` to that absolute path. Run its injector
+against an absolute lesson path in the project output directory, for example:
+
+```sh
+TEACHER_SKILL_ROOT="/absolute/path/to/sibling/teacher"
+python3 "$TEACHER_SKILL_ROOT/scripts/embed_reading_themes.py" \
+  "/absolute/path/to/project/lesson.html" \
+  -o "/absolute/path/to/project/lesson.html"
+```
+
+Keep lesson files in the project; do not change into or write inside either
+skill directory.
+It offers Dark and Night palettes, Original reset and URL-based propagation
+through local HTML course links, without browser storage or network. Follow
+`../teacher/references/READING-THEMES.md` for keyboard, contrast and mobile checks.
+Video and image pixels retain their original colors. The preserved embedded
+fallback does not include this new picker; do not modify its historical source
+or receipts to claim otherwise.
 
 - Do not require an OpenAI, Anthropic, or other model-provider API key.
 - Do not treat a ChatGPT, Codex, Claude, or other subscription as a hidden
