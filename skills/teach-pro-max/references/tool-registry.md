@@ -95,6 +95,23 @@ where exactness matters.
 | Narration | Local TTS if available | Verify availability; captions + transcript required |
 | Paid TTS API | Only with the learner's authorization | Never require a model-provider key for the lesson to work |
 
+## Design and critique skills
+
+Consult before a visual build and run at least one critique pass on a new
+template; record the findings and the fixes. Install per the host's skill layout
+(`npx skills add <owner/repo>` where supported).
+
+| Skill | Source | Use |
+| --- | --- | --- |
+| frontend-design | `anthropics/skills` → `skills/frontend-design/SKILL.md` | Distinctive visual direction, type and palette |
+| impeccable | `pbakaus/impeccable` (`npx impeccable install`) | `/polish`, `/audit`, `/typeset`, `/distill` critique |
+| ui-ux-pro-max | `nextlevelbuilder/ui-ux-pro-max-skill` | Searchable styles, palettes, type pairings, UX patterns |
+| emilkowalski/skills | `emilkowalski/skills` | Micro-interactions, motion timing, prototyping, DESIGN.md |
+| web-design-guidelines | `vercel-labs/agent-skills` → `skills/web-design-guidelines/SKILL.md` | Interface audit and accessibility review |
+| ux-ui-agent-skills | `plugin87/ux-ui-agent-skills` | Design systems, DTCG tokens, WCAG 2.2 gates |
+| shadcn skill | `shadcn-ui/ui` → `skills/shadcn/SKILL.md` | Component and token conventions |
+| wshobson/agents | `wshobson/agents` | Component and design catalog |
+
 ## Skills and upstream registries
 
 Read the actual `SKILL.md` and its references before applying a skill; a name is
